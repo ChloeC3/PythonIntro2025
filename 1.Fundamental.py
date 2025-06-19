@@ -69,4 +69,19 @@ print(type(age))
 # 5. file
 # 6. class 
 # 7. exception 
+a = 12 
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a // b) # 4 integer division, rounded down towards minus infinity 
+print(a % b)  # 0 modulo: the remainer after integer division 
+
+# Expression 
+for i in range (1, a//b):
+    print(i)
+
+##
+# Operator precedence 
 
