@@ -82,6 +82,47 @@ print(a % b)  # 0 modulo: the remainer after integer division
 for i in range (1, a//b):
     print(i)
 
-##
 # Operator precedence 
+# 1. PEMDAS: Parentheses, Exponents, Multiplication / Division, Addition / Subtraction 
+# 2. BEDMAS: Brackets, Exponents, Division / Multiplication, Addition / Substraction 
+# 3. BODMAS: Brackets, Order, Division / Multiplication, Addition / Subtraction 
+# 4. BIDMAS: Brackets, Index, Division / Multiplication, Addition / Subtraction 
+# 5. Equal precedence - evaluate from left to right. 
+print(a+b/3-4*12)
 
+# The str string data type 
+#         012345678901234
+#      -  543210987654321
+parrot = "Norweigian Blue"
+print(parrot)
+print(parrot[3])
+# "we win"
+print(parrot[3] + parrot[4]+ ' ' + parrot[3] + parrot[5] + parrot[9])
+print(parrot[3] + parrot[4]+ parrot[10] + parrot[3] + parrot[5] + parrot[9])
+print(parrot[-12] + parrot[-11]+ parrot[-5] + parrot[-12] + parrot[-10] + parrot[-6])
+print(parrot[3-15] + parrot[4-15]+ parrot[10-15] + parrot[3-15] + parrot[5-15] + parrot[9-15])
+
+# Slicing 
+parrot = "Norweigian Blue"
+print(parrot[0:6]) # Norweg
+print(parrot[3:5])
+print(parrot[0:9])
+print(parrot[:9])
+print(parrot[10:14])
+print(parrot[10:])
+print(parrot[6:])
+print(parrot[:6] + parrot[6:])
+
+# Slicing with negative numbers 
+parrot = "Norweigian Blue"
+print(parrot[-14:-8]) #orweig
+print(parrot[-4:-2])  #bl
+print(parrot[-4:12])  #b
+print(parrot[-4:-12]) # 
+
+# Using a step in a slice 
+#         012345678901234
+#      -  543210987654321
+parrot = "Norweigian Blue"
+print(parrot[0:6:2])
+print(parrot[0:6:3])
