@@ -172,4 +172,49 @@ computer_parts =["computer","monitor","keyboard","mouse","mouse mat"]
 print(computer_parts[1]) # monitor
 print(computer_parts[1][0]) # monitor [0] index = m
 
+string1 = "he's "
+string2 = "probably "
+string3 = "pining "
+string4 = "for the "
+string5 = "fjords"
+print(string1+string2+string3+string4+string5)
+print("he's ""probably ""pining ""for the ""fjords")
 
+print("hello"*5)
+print("hello"*5 +"4")
+today = "friday"
+print("day" in today) # true
+print("fri" in today) # true
+print("thur" in today) # false
+print("parrot" in "fjor") # false 
+
+# string replacement fields 
+# When printing strings and numbers, it would often be convenient to display both values using a single call to print. 
+age = 24
+print("My age is" + str(age) +' years')
+print("My age is {0} years".format(age))
+print("There are {0} days in {1}, {2}, {3}, {4}, {5}, {6} and {7}"
+      .format(31, "Jan", "Mar", "May", "Jul", "Aug", "Oct", "Dec"))
+print("There are {0} days in Jan, Mar, May, Jul, Aug, Oct, and Dec".format(31))
+print("Jan:{2},Feb:{0}, Mar:{2}, Apr:{1}, May:{2},Jun:{1},Jul:{2}, Sep:{1}, Oct:{2}, Nov:{1},Dec:{2}"
+      .format(28,30,31))
+#{0}-format 28 value / {1}-format 2nd value:30 / {2}-format 3rd value 31
+print("""
+Jan:{2}
+Feb:{0}
+Mar:{2}
+Apr:{1}
+May:{2}
+Jun:{1}
+Jul:{2}
+Sep:{1}
+Oct:{2}
+Nov:{1}
+Dec:{2}""".format(28,30,31))
+
+# String Formatting 
+for i in range(1,13):
+    print("No. {0} sqaured is {1} and cubed is {2}".format(i, i**2, i**3))
+# formatting 
+for i in range(1,13):
+    print("No. {0:2} sqaured is {1:4} and cubed is {2}".format(i, i**2, i**3))
