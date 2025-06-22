@@ -121,8 +121,55 @@ print(parrot[-4:12])  #b
 print(parrot[-4:-12]) # 
 
 # Using a step in a slice 
+# 1. The slice starts at index position 0
+# 2. It extends up to (but not including) position 6 
+# 3. We step through the sequence in steps of 2 
+# eg. parrot[0:6:2] = Nre
+# eg. parrot[0:6:3] = Nw
 #         012345678901234
 #      -  543210987654321
 parrot = "Norweigian Blue"
 print(parrot[0:6:2])
 print(parrot[0:6:3])
+
+number = "9,223,372,036,854,775,807"
+print(number[1::4]) # ,,,,,,
+seperators = number[1::4]
+values = "".join(char if char not in seperators else " " for char in number).split()
+print([int(val) for val in values])
+
+#slicing backwards 
+# make sure the start value is greater than the stop value 
+letters="abcdefghijklmnopqrstuvwxyz"
+backwards = letters[25:0:-1]
+backwards = letters[25:-1:-1]
+backwards = letters[::-1]
+print(backwards)
+# qpo
+letters="abcdefghijklmnopqrstuvwxyz"
+print(letters[16:13:-1])
+# edcba 
+letters="abcdefghijklmnopqrstuvwxyz"
+print(letters[4::-1])
+# the last 8 characters in reverse order 
+letters="abcdefghijklmnopqrstuvwxyz"
+print(letters[26:17:-1])
+print(letters[:-9:-1])
+# Other practices 
+print(letters[-4:]) #wxyz
+print(letters[-1:]) # get the last letter
+print([letters[:1]]) # get the first letter 
+print(letters[0]) # get the first lettter  / if string is empty, return error 
+
+# string operators 
+# Python 3 has 5 sequence types built in:
+# 1) the string type; 2) list; 3) tuple; 4) range; 5) bytes and bytearray 
+# A sequence is definied as an ordered set of items. 
+# eg. "Hello World" - contains 11 items, each item is a character 
+# A list eg. ["computer","monitor","keyboard","mouse","mouse mat"] - contains 5 items, each item is a string 
+
+computer_parts =["computer","monitor","keyboard","mouse","mouse mat"] 
+print(computer_parts[1]) # monitor
+print(computer_parts[1][0]) # monitor [0] index = m
+
+
